@@ -1,5 +1,5 @@
 @echo off
-TITLE ARG-LEX | Command Center
+TITLE ARG-LEX - Command Center
 COLOR 0F
 
 echo ==================================================
@@ -10,9 +10,9 @@ echo.
 :: Check for Ollama
 tasklist /FI "IMAGENAME eq ollama_app.exe" 2>NUL | find /I /N "ollama_app.exe">NUL
 if "%ERRORLEVEL%"=="0" (
-    echo [STATUS] Brain (Ollama) is ONLINE.
+    echo [STATUS] Brain Ollama is ONLINE.
 ) else (
-    echo [WARNING] Brain (Ollama) is NOT RUNNING.
+    echo [WARNING] Brain Ollama is NOT RUNNING.
     echo           Please start Ollama manually for full functionality.
 )
 

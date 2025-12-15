@@ -1,5 +1,5 @@
 @echo off
-TITLE ARG-LEX | System Setup
+TITLE ARG-LEX - System Setup
 COLOR 0A
 
 echo ==================================================
@@ -11,7 +11,7 @@ echo.
 echo [1/2] Setting up Neural Backend (Python)...
 cd backend
 if not exist "venv" (
-    echo    - Creating Virtual Environment (venv)...
+    echo    - Creating Virtual Environment venv...
     python -m venv venv
 ) else (
     echo    - Virtual Environment found.

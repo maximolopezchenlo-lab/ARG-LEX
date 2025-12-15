@@ -13,6 +13,9 @@
 		showControls,
 		showSidebar,
 		temporaryChatEnabled,
+		showSidebar,
+		temporaryChatEnabled,
+		readerMode,
 		user
 	} from '$lib/stores';
 
@@ -37,7 +40,10 @@
 	import EllipsisHorizontal from '../icons/EllipsisHorizontal.svelte';
 	import ChatPlus from '../icons/ChatPlus.svelte';
 	import ChatCheck from '../icons/ChatCheck.svelte';
+	import ChatPlus from '../icons/ChatPlus.svelte';
+	import ChatCheck from '../icons/ChatCheck.svelte';
 	import Knobs from '../icons/Knobs.svelte';
+	import BookOpen from '../icons/BookOpen.svelte';
 	import { WEBUI_API_BASE_URL } from '$lib/constants';
 
 	const i18n = getContext('i18n');
@@ -209,6 +215,22 @@
 							</button>
 						</Menu>
 					{/if}
+
+					<Tooltip content={$i18n.t('Reader Mode')}>
+						<button
+							class=" flex cursor-pointer px-2 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition {$readerMode
+								? 'bg-gray-50 dark:bg-gray-850'
+								: ''}"
+							on:click={() => {
+								readerMode.set(!$readerMode);
+							}}
+							aria-label="Reader Mode"
+						>
+							<div class=" m-auto self-center">
+								<BookOpen className=" size-5" strokeWidth="1.5" />
+							</div>
+						</button>
+					</Tooltip>
 
 					{#if $user?.role === 'admin' || ($user?.permissions.chat?.controls ?? true)}
 						<Tooltip content={$i18n.t('Controls')}>

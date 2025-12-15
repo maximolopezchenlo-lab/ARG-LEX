@@ -21,6 +21,7 @@
 		models,
 		settings,
 		temporaryChatEnabled,
+		readerMode,
 		TTSWorker,
 		user
 	} from '$lib/stores';
@@ -659,7 +660,11 @@
 			</Name>
 
 			<div>
-				<div class="chat-{message.role} w-full min-w-full markdown-prose">
+				<div
+					class="chat-{message.role} w-full min-w-full markdown-prose {$readerMode
+						? 'font-serif text-justify leading-loose max-w-4xl mx-auto px-8 py-4 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 shadow-sm'
+						: ''}"
+				>
 					<div>
 						{#if model?.info?.meta?.capabilities?.status_updates ?? true}
 							<StatusHistory statusHistory={message?.statusHistory} />

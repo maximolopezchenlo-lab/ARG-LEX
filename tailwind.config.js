@@ -1,3 +1,4 @@
+
 import typography from '@tailwindcss/typography';
 import containerQueries from '@tailwindcss/container-queries';
 
@@ -17,10 +18,10 @@ export default {
 					500: 'var(--color-gray-500, #9b9b9b)',
 					600: 'var(--color-gray-600, #676767)',
 					700: 'var(--color-gray-700, #4e4e4e)',
-					800: 'var(--color-gray-800, #333)',
-					850: 'var(--color-gray-850, #262626)',
-					900: 'var(--color-gray-900, #171717)',
-					950: 'var(--color-gray-950, #0d0d0d)'
+					800: 'var(--color-gray-800, #171717)',
+					850: 'var(--color-gray-850, #121212)',
+					900: 'var(--color-gray-900, #0a0a0a)',
+					950: 'var(--color-gray-950, #050505)'
 				}
 			},
 			typography: {
@@ -36,6 +37,17 @@ export default {
 			},
 			padding: {
 				'safe-bottom': 'env(safe-area-inset-bottom)'
+			},
+			borderRadius: {
+				DEFAULT: '0.25rem',
+				'none': '0',
+				'sm': '0.125rem',
+				'md': '0.25rem',
+				'lg': '0.25rem',
+				'xl': '0.25rem',
+				'2xl': '0.25rem',
+				'3xl': '0.25rem',
+				'full': '9999px',
 			},
 			transitionProperty: {
 				width: 'width'

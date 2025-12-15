@@ -27,4 +27,3 @@ echo.
 echo [2/2] Setup Complete!
 echo.
 echo You can now use 'start_arglex.bat' to launch the system.
-pause

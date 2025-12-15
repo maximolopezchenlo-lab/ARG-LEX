@@ -28,4 +28,3 @@ echo.
 echo System Operational.
 echo Access the interface at: http://localhost:5173
 echo.
-pause

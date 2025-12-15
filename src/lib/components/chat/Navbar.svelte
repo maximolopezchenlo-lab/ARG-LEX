@@ -13,8 +13,6 @@
 		showControls,
 		showSidebar,
 		temporaryChatEnabled,
-		showSidebar,
-		temporaryChatEnabled,
 		readerMode,
 		user
 	} from '$lib/stores';
@@ -40,8 +38,7 @@
 	import EllipsisHorizontal from '../icons/EllipsisHorizontal.svelte';
 	import ChatPlus from '../icons/ChatPlus.svelte';
 	import ChatCheck from '../icons/ChatCheck.svelte';
-	import ChatPlus from '../icons/ChatPlus.svelte';
-	import ChatCheck from '../icons/ChatCheck.svelte';
+
 	import Knobs from '../icons/Knobs.svelte';
 	import BookOpen from '../icons/BookOpen.svelte';
 	import { WEBUI_API_BASE_URL } from '$lib/constants';

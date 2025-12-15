@@ -358,7 +358,7 @@
 						if ($settings?.notificationEnabled ?? false) {
 							new Notification(`${title} • ARG-LEX`, {
 								body: content,
-								icon: `${WEBUI_BASE_URL}/static/logo.svg`
+								icon: `${WEBUI_BASE_URL}/logo.svg`
 							});
 						}
 					}

@@ -50,5 +50,27 @@ export default defineConfig({
 				changeOrigin: true
 			}
 		}
+	},
+	preview: {
+		port: 5173,
+		host: true,
+		proxy: {
+			'/api': {
+				target: 'http://localhost:8080',
+				changeOrigin: true
+			},
+			'/ollama': {
+				target: 'http://localhost:8080',
+				changeOrigin: true
+			},
+			'/openai': {
+				target: 'http://localhost:8080',
+				changeOrigin: true
+			},
+			'/uploads': {
+				target: 'http://localhost:8080',
+				changeOrigin: true
+			}
+		}
 	}
 });
